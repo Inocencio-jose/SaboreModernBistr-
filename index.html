@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saboré Modern Bistro — Cardápio digital moderno e responsivo. Descubra nossos sabores em um menu elegante e prático.">
+  <meta name="theme-color" content="#f59e0b">
+  <meta name="author" content="Saboré Modern Bistro">
+  <title>Saboré Modern Bistro | Menu Digital</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/icon.png" type="image/png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-white text-slate-800 font-sans antialiased overflow-x-hidden">
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-white/90 backdrop-blur shadow z-50">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <h1 class="text-xl md:text-2xl font-playfair font-semibold text-amber-600 flex items-center gap-2">
+        <i data-lucide="utensils" class="w-5 h-5 text-amber-500"></i> Saboré
+      </h1>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#menu" class="hover:text-amber-600 transition">Cardápio</a>
+        <a href="#contato" class="hover:text-amber-600 transition">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="pt-28">
+    <!-- Hero -->
+    <section class="bg-gradient-to-b from-white to-amber-50">
+      <div class="max-w-5xl mx-auto px-4 py-12 md:py-20 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-playfair mb-3 leading-tight">
+            Bem-vindo ao <span class="text-amber-500">Saboré Modern Bistro</span>
+          </h2>
+          <p class="text-lg text-slate-600 mb-6">
+            Um toque moderno no sabor tradicional. Explore nosso cardápio digital com estilo, conforto e praticidade.
+          </p>
+          <div class="flex gap-3">
+            <a href="#menu" class="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-amber-400 bg-amber-50 text-amber-700 font-medium hover:bg-amber-100 transition">
+              <i data-lucide="menu" class="w-4 h-4"></i> Ver Cardápio
+            </a>
+            <a href="#contato" class="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-gray-200 text-slate-700 hover:bg-gray-50 transition">
+              <i data-lucide="phone" class="w-4 h-4"></i> Contato
+            </a>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+          <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80" alt="Prato gourmet" class="w-full h-64 md:h-80 object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+        <h3 class="text-2xl font-semibold flex items-center gap-2">
+          <i data-lucide="list" class="w-5 h-5 text-amber-500"></i> Cardápio
+        </h3>
+
+        <div class="flex flex-wrap gap-3 items-center">
+          <div class="tabs flex bg-gray-50 rounded-full p-1 shadow-sm overflow-x-auto" role="tablist">
+            <button class="tab px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap" data-cat="all" aria-selected="true">Todos</button>
+            <button class="tab px-4 py-2 rounded-full text-sm font-medium" data-cat="entradas">Entradas</button>
+            <button class="tab px-4 py-2 rounded-full text-sm font-medium" data-cat="principais">Pratos Principais</button>
+            <button class="tab px-4 py-2 rounded-full text-sm font-medium" data-cat="bebidas">Bebidas</button>
+            <button class="tab px-4 py-2 rounded-full text-sm font-medium" data-cat="sobremesas">Sobremesas</button>
+          </div>
+          <input id="search" type="search" placeholder="Buscar prato..." class="px-3 py-2 border rounded-md text-sm w-48 md:w-60 focus:outline-none focus:ring-2 focus:ring-amber-400 transition" aria-label="Buscar no cardápio">
+        </div>
+      </div>
+
+      <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Itens injetados via JS -->
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="bg-gray-50 border-t border-gray-100">
+      <div class="max-w-5xl mx-auto px-4 py-10 md:py-14">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <h4 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-amber-500"></i> Contato</h4>
+            <p class="text-sm text-slate-600">WhatsApp: <a href="https://wa.me/244999999999" class="text-amber-600">(244) 999-999-999</a></p>
+            <p class="text-sm text-slate-600">Endereço: Rua Exemplo, 123 — Cidade</p>
+          </div>
+          <div class="md:col-span-2">
+            <h4 class="text-lg font-semibold mb-2 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-amber-500"></i> Localização</h4>
+            <p class="text-sm text-slate-600">Clique para abrir no Google Maps</p>
+            <a href="https://www.google.com/maps" target="_blank" class="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-md border bg-white text-sm hover:bg-amber-50 transition">
+              <i data-lucide="map" class="w-4 h-4"></i> Abrir mapa
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-6">
+    <div class="max-w-5xl mx-auto px-4 text-center text-sm text-gray-500">
+      © 2025 Saboré Modern Bistro — Menu Digital
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
